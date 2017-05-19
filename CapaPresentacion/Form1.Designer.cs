@@ -28,67 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.txtPrimerApellido = new System.Windows.Forms.TextBox();
+            this.btnValidar = new System.Windows.Forms.Button();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.lblPrimerApellido = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnEnviar
+            // btnValidar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(125, 153);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviar.TabIndex = 1;
-            this.btnEnviar.Text = "&Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.button2_Click);
+            this.btnValidar.Location = new System.Drawing.Point(150, 140);
+            this.btnValidar.Name = "btnValidar";
+            this.btnValidar.Size = new System.Drawing.Size(75, 23);
+            this.btnValidar.TabIndex = 1;
+            this.btnValidar.Text = "&Validar";
+            this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtPrimerNombre
+            // txtUsuario
             // 
-            this.txtPrimerNombre.Location = new System.Drawing.Point(125, 41);
-            this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtPrimerNombre.TabIndex = 2;
+            this.txtUsuario.Location = new System.Drawing.Point(125, 41);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 2;
             // 
-            // txtPrimerApellido
+            // txtClave
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(125, 67);
-            this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtPrimerApellido.TabIndex = 3;
+            this.txtClave.Location = new System.Drawing.Point(125, 67);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(100, 20);
+            this.txtClave.TabIndex = 3;
             // 
             // lblPrimerNombre
             // 
             this.lblPrimerNombre.AutoSize = true;
             this.lblPrimerNombre.Location = new System.Drawing.Point(13, 44);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(79, 13);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(43, 13);
             this.lblPrimerNombre.TabIndex = 4;
-            this.lblPrimerNombre.Text = "Primer &Nombre:";
+            this.lblPrimerNombre.Text = "Usuario";
             // 
             // lblPrimerApellido
             // 
             this.lblPrimerApellido.AutoSize = true;
             this.lblPrimerApellido.Location = new System.Drawing.Point(13, 74);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(79, 13);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(34, 13);
             this.lblPrimerApellido.TabIndex = 5;
-            this.lblPrimerApellido.Text = "Primer &Apellido:";
+            this.lblPrimerApellido.Text = "Clave";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(481, 202);
             this.Controls.Add(this.lblPrimerApellido);
             this.Controls.Add(this.lblPrimerNombre);
-            this.Controls.Add(this.txtPrimerApellido);
-            this.Controls.Add(this.txtPrimerNombre);
-            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.btnValidar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Autenticacion";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,9 +97,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.TextBox txtPrimerNombre;
-        private System.Windows.Forms.TextBox txtPrimerApellido;
+        private System.Windows.Forms.Button btnValidar;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label lblPrimerNombre;
         private System.Windows.Forms.Label lblPrimerApellido;
     }

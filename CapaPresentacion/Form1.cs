@@ -20,7 +20,7 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Registro oRegistro = new Registro(txtPrimerNombre.Text,txtPrimerApellido.Text);
+            Registro oRegistro = new Registro(txtUsuario.Text,txtClave.Text);
             oRegistro.MostrarRegistro();
         }
     }
