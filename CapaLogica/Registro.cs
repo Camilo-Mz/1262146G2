@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace CapaLogica
 {
@@ -60,9 +61,22 @@ namespace CapaLogica
             this.primerApellido = PrimerApellido;
         }
 
-        public void MostrarRegistro()
+        public void MostrarRegistro()//string usuario,string clave)
         {
-            MessageBox.Show("su Primer Nombre es: "+ primerNombre+ " "+ "y apellido es  "+ primerApellido );
+            //if (loTraigo == 1)
+            //    MessageBox.Show("usuario y clave validos");
+            
+             
+
+            //else
+            //{
+               MessageBox.Show("usuario o contraseña invalidos");
+
+            //}
+               
+            
+
+            //MessageBox.Show("su Primer Nombre es: "+ primerNombre+ " "+ "y apellido es  "+ primerApellido );
         }
 
 

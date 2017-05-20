@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnValidar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.lblPrimerApellido = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnValidar
             // 
-            this.btnValidar.Location = new System.Drawing.Point(150, 140);
+            this.btnValidar.Location = new System.Drawing.Point(109, 131);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(75, 23);
             this.btnValidar.TabIndex = 1;
@@ -47,14 +50,14 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(125, 41);
+            this.txtUsuario.Location = new System.Drawing.Point(99, 41);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(125, 67);
+            this.txtClave.Location = new System.Drawing.Point(99, 67);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(100, 20);
@@ -78,11 +81,15 @@
             this.lblPrimerApellido.TabIndex = 5;
             this.lblPrimerApellido.Text = "Clave";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 202);
+            this.ClientSize = new System.Drawing.Size(309, 218);
             this.Controls.Add(this.lblPrimerApellido);
             this.Controls.Add(this.lblPrimerNombre);
             this.Controls.Add(this.txtClave);
@@ -90,6 +97,7 @@
             this.Controls.Add(this.btnValidar);
             this.Name = "Form1";
             this.Text = "Autenticacion";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +110,7 @@
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label lblPrimerNombre;
         private System.Windows.Forms.Label lblPrimerApellido;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
