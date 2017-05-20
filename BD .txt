@@ -1,0 +1,83 @@
+CREATE DATABASE Ejercicio1
+USE [Ejercicio1]
+GO
+/****** Object:  User [jsluguer]    Script Date: 19/05/2017 9:00:40 p.m. ******/
+CREATE USER [jsluguer] FOR LOGIN [jsluguer] WITH DEFAULT_SCHEMA=[dbo]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_accessadmin] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_securityadmin] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_ddladmin] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_backupoperator] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_datawriter] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_denydatareader] ADD MEMBER [jsluguer]
+GO
+ALTER ROLE [db_denydatawriter] ADD MEMBER [jsluguer]
+GO
+/****** Object:  Table [dbo].[Rol]    Script Date: 19/05/2017 9:00:40 p.m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Rol](
+	[idRol] [int] NOT NULL,
+	[descripcion] [varchar](35) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[idRol] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Usuario]    Script Date: 19/05/2017 9:00:40 p.m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Usuario](
+	[tipoIdentificacion] [varchar](10) NULL,
+	[Id] [int] NOT NULL,
+	[primerNombre] [varchar](35) NULL,
+	[segundoNombre] [varchar](35) NULL,
+	[primerApellido] [varchar](35) NULL,
+	[segundoApellido] [varchar](35) NULL,
+	[fechaNacimiento] [date] NULL,
+	[genero] [varchar](35) NULL,
+	[pasatiempo] [varchar](35) NULL,
+	[RH] [varchar](5) NULL,
+	[EPS] [varchar](35) NULL,
+	[estadoCivil] [varchar](35) NULL,
+	[profesion] [varchar](35) NULL,
+	[correo] [varchar](35) NULL,
+	[direccion] [varchar](60) NULL,
+	[telefonoMovil] [varchar](12) NULL,
+	[telefonoFijo] [varchar](12) NULL,
+	[nickname] [nvarchar](50) NULL,
+	[clave] [nvarchar](50) NULL,
+	[idRol] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+ALTER TABLE [dbo].[Usuario]  WITH CHECK ADD FOREIGN KEY([idRol])
+REFERENCES [dbo].[Rol] ([idRol])
+GO
